@@ -7,8 +7,8 @@ const model = [
             'second row',
             'third row',
             'fourth row',
-        ],
-    },
+        ]},
+    { type: 'image', value: './assets/mountain2.jpg'},
 ];
 
 // Получаем доступ к блоку 
@@ -22,6 +22,8 @@ model.forEach(block => {
         html = text(block);
     } else if (block.type === 'columns') {
         html = columns(block);
+    } else if (block.type === 'image') {
+        html = image(block);
     };
 
     // Метод, который позволяет вставлять в определённое место html 
@@ -55,6 +57,14 @@ function columns(block) {
         <div class="row">
             ${html.join('')}
         </div>
-        `
-    };
+    `
+};
+
+function image(block) {
+    return `
+        <div class="row">
+            <img src="${block.value}"/>
+        </div>
+    `
+};
 
