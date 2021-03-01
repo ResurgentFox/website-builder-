@@ -6,6 +6,7 @@ const model = [
             'first row',
             'second row',
             'third row',
+            'fourth row',
         ],
     },
 ];
@@ -25,8 +26,7 @@ model.forEach(block => {
 
     // Метод, который позволяет вставлять в определённое место html 
     $site.insertAdjacentHTML('beforeend', html);
-    },
-);
+    });
 
 // функция принимает в себя объект и возвращает готовый html 
 function title(block) {
@@ -50,18 +50,11 @@ function text(block) {
 };
 
 function columns(block) {
+    const html = block.value.map(item => `<div class="col-sm">${item}</div>`)
     return `
-    <div class="row">
-        <div class="col-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, neque?
+        <div class="row">
+            ${html.join('')}
         </div>
-        <div class="col-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, neque?
-        </div>
-        <div class="col-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, neque?
-        </div>
-    </div>
-    `
-};
+        `
+    };
 
