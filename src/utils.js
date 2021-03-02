@@ -11,3 +11,23 @@ export function css(styles = {}) {
     const toString = key => `${key}: ${styles[key]}`;
     return Object.keys(styles).map(toString).join(';');
 };
+
+export function block(type) {
+    return `
+        <form name="${type}">
+        
+        <h5>${type}</h5>
+        <hr>
+        <div class="form-group">
+            <input class="form-control form-control-sm" name="value" placeholder="value">
+        </div>
+        <br>
+        <div class="form-group">
+            <input class="form-control form-control-sm" name="styles" placeholder="styles">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+    </form>
+    <br>
+    `
+};
