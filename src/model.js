@@ -26,16 +26,6 @@ export const model = [
             height: 'auto',
         }, alt: 'This is image' }),
 
-    new TextBlock('What do we get?', {
-        styles: {
-        padding: '1.5rem 0',
-        'text-align': 'center',
-        'font-size': '2rem',
-        'font-weight': '500',
-        'font-family': 'var(--bs-font-sans-serif)',
-        },
-    }),
-    
     new ColumnsBlock(
         [
         'Learning a new stuff',
@@ -47,9 +37,21 @@ export const model = [
             padding: '0 5rem',
             display: 'flex', 
             'justify-content': 'space-between',
-            'font-size': '24px',
-            'font-weight': '300',
+            'font-size': '30px',
+            'font-weight': '400',
             'font-family': 'var(--bs-font-sans-serif)',
         },
     }),
+
+    new TextBlock('JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. More info: https://developer.mozilla.org and https://learn.javascript.ru', {
+        styles: {
+        padding: '3rem 0',
+        'text-align': 'center',
+        'font-size': '24px',
+        'font-weight': '300',
+        'font-family': 'var(--bs-font-sans-serif)',
+        background: 'linear-gradient( to right top, #B0C4DE, #D8BFD8)',
+        },
+    }),
+
 ];
