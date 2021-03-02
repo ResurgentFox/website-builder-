@@ -25,6 +25,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "main.css": "^2.1.0"
+    "main.css": "^2.1.0",
+    "utils": "^0.3.1"
   }
 }
