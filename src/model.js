@@ -1,5 +1,5 @@
 import image from './assets/image2.png';
-import {TitleBlock, ImageBlock, TextBlock, ColumnsBlock} from './classes/blocks';
+import {TitleBlock, ImageBlock, TextBlock, ColumnsBlock} from './components/blocks';
 
 export const model = [
     new TitleBlock('Website builder with native JavaScript', {

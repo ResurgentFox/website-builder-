@@ -1,5 +1,5 @@
 import { model } from './model';
-import { App } from './classes/app';
+import { App } from './components/app';
 import './main.css';
 
 new App(model).init();
